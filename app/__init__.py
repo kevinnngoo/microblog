@@ -8,6 +8,12 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from config import Config
 from flask_moment import Moment
+from flask import request
+from flask_babel import Babel 
+
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return 'en'
 
 
 app = Flask(__name__)
@@ -18,6 +24,7 @@ login = LoginManager(app)
 login.login_view = 'login'
 mail = Mail(app)
 moment = Moment(app)
+babel = Babel(app, locale_selector=get_locale)
 
 
 if not app.debug:
