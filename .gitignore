@@ -37,9 +37,15 @@ nosetests.xml
 
 venv
 app.db
+*.db
 microblog.log*
 .env
 .flaskenv
+
+# Redis and background jobs
+dump.rdb
+redis.zip
+redis_server/
 
 # SSH keys
 id_rsa

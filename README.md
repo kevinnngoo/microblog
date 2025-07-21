@@ -1,10 +1,11 @@
 # Microblog
 
-A full-featured Flask web application following Miguel Grinberg's Flask Mega-Tutorial. This project demonstrates modern Flask development practices with real-time features, internationalization, and production-ready deployment.
+A full-featured Flask web application following Miguel Grinberg's Flask Mega-Tutorial. This project demonstrates modern Flask development practices with real-time features, internationalization, background job processing, and a complete RESTful API.
 
 ## 🚀 Features
 
 ### Core Functionality
+
 - **User Authentication** - Registration, login, logout, password reset
 - **User Profiles** - Customizable profiles with Gravatar avatars
 - **Social Features** - Follow/unfollow users, personalized timeline
@@ -14,7 +15,11 @@ A full-featured Flask web application following Miguel Grinberg's Flask Mega-Tut
 - **Post Translation** - Microsoft Translator integration for multilingual content
 
 ### Advanced Features
+
 - **Real-time Notifications** - JavaScript polling for instant message notifications
+- **Background Jobs** - RQ (Redis Queue) for asynchronous task processing
+- **Email Attachments** - Export posts as JSON with email delivery
+- **RESTful API** - Complete token-based API for external integrations
 - **Internationalization** - Multi-language support (English/Spanish)
 - **User Discovery** - Hover-activated user popover cards
 - **Responsive Design** - Bootstrap 5 mobile-first interface
@@ -35,6 +40,7 @@ A full-featured Flask web application following Miguel Grinberg's Flask Mega-Tut
 ## 📦 Installation
 
 ### Prerequisites
+
 - Python 3.8+
 - Node.js (for frontend dependencies)
 - Elasticsearch (optional, for search functionality)
@@ -42,12 +48,14 @@ A full-featured Flask web application following Miguel Grinberg's Flask Mega-Tut
 ### Quick Start
 
 1. **Clone the repository**
+
 ```bash
 git clone https://github.com/yourusername/microblog.git
 cd microblog
 ```
 
 2. **Create virtual environment**
+
 ```bash
 python -m venv venv
 
@@ -59,11 +67,13 @@ source venv/bin/activate
 ```
 
 3. **Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. **Set up environment variables**
+
 ```bash
 # Copy the environment template
 cp .env-template .env
@@ -77,11 +87,13 @@ cp .env-template .env
 ```
 
 5. **Initialize the database**
+
 ```bash
 flask db upgrade
 ```
 
 6. **Run the application**
+
 ```bash
 flask run
 ```
@@ -91,6 +103,7 @@ Visit `http://localhost:5000` to access the application.
 ## 🐳 Docker Deployment
 
 ### Quick Docker Setup
+
 ```bash
 # Build and run with Docker Compose
 docker-compose up --build
@@ -103,6 +116,7 @@ docker run -p 5000:5000 microblog
 ## 📱 Usage
 
 ### Getting Started
+
 1. **Register** a new account or use the default admin account
 2. **Complete your profile** with bio and avatar
 3. **Create your first post** to share with followers
@@ -111,6 +125,7 @@ docker run -p 5000:5000 microblog
 6. **Search posts** using the search bar in navigation
 
 ### Key Features Demo
+
 - **Real-time Notifications**: Send a message to see live badge updates
 - **Post Translation**: Click translate on posts in different languages
 - **User Popovers**: Hover over usernames to see profile cards
